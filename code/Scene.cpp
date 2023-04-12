@@ -46,7 +46,7 @@ Scene::Initialize
 ====================================================
 */
 void Scene::Initialize() {
-	Body body;
+	
 
 	// Tests with one moving fast an oter fix 
 	/*
@@ -81,7 +81,7 @@ void Scene::Initialize() {
 	*/
 
 	/*
-	
+	Body body;
 	//Rajoutes plusiueurs sphères
 	for (int i = 0; i < 6; ++i)
 	{
@@ -122,14 +122,14 @@ void Scene::Initialize() {
 	*/
 
 	
-	
-	body.position = Vec3( 0, 0, 10 );
-	body.orientation = Quat( 0, 0, 0, 1 );
-	body.shape = new ShapeSphere( 1.0f );
-	body.inverseMass = 1.0f;
-	body.elasticity = 0.5f;
-	body.friction = 0.5f;
-	bodies.push_back( body );
+	Body cochonet;
+	cochonet.position = Vec3( 0, 0, 10 );
+	cochonet.orientation = Quat( 0, 0, 0, 1 );
+	cochonet.shape = new ShapeSphere( 0.5f );
+	cochonet.inverseMass = 1.0f;
+	cochonet.elasticity = 0.5f;
+	cochonet.friction = 0.5f;
+	bodies.push_back(cochonet);
 	
 	Body earth;
 	earth.position = Vec3(0, 0, -6000);
